@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz ISO 8583</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ pregunta }}</h1>
+        <form action="{{ url_for('responder') }}" method="POST">
+            <input type="text" name="respuesta" id="respuestaInput" required autofocus>
+            <button type="submit">Responder</button>
+        </form>
+        <div>
+            <p>Respuestas correctas: {{ correctas }}</p>
+            <p>Respuestas incorrectas: {{ incorrectas }}</p>
+        </div>
+    </div>
+
+    <script>
+        // Colocar automáticamente el foco en el campo de texto al cargar la página
+        window.onload = function() {
+            document.getElementById('respuestaInput').focus();
+        };
+    </script>
+</body>
+</html>
