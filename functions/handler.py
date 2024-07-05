@@ -1,7 +1,6 @@
 from app import app
+from werkzeug.middleware.dispatcher import DispatcherMiddleware
+from werkzeug.serving import run_simple
 
 def handler(event, context):
-    from flask import request
-    from werkzeug.serving import run_simple
-
-    return run_simple('localhost', 5000, app)
+    return run_simple('0.0.0.0', 5000, app)
