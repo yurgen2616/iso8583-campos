@@ -6,12 +6,12 @@ app.secret_key = 'supersecretkey'
 
 campos_iso8583 = ["mapa de los bits extendidos", "numero de cuenta principal pan", "codigo de procesamiento",
                   "monto de transaccion", "monto de liquidacion", "monto de facturacion al titular de la tarjeta",
-                  "fecha y hora de transaccion", "monto, tarifa de facturacion al titular de la tarjeta",
+                  "fecha y hora de transmision", "monto, tarifa de facturacion al titular de la tarjeta",
                   "tasa de conversion, liquidacion", "tasa de conversion, facturacion al titular de la tarjeta",
                   "numero de auditoria de seguimiento de sistema", "hora de transaccion local", "fecha de transaccion local",
                   "fecha de vencimiento de la tarjeta", "fecha de liquidacion", "fecha de conversion", "fecha de captura",
                   "tipo de comerciante", "codigo de pais de la institucion adquiriente", "pan extendido, codigo de pais",
-                  "institucion expedidora, codigo de pais", "modo de entidad de punto de servicio", "numero de pan de la aplicacion",
+                  "institucion expedidora, codigo de pais", "modo de entrada de punto de servicio", "numero de pan de la aplicacion",
                   "codigo funcion (iso 8583 de 1993) identificador de red", "codigo condicion de punto de servicio",
                   "codigo captura de punto de servicio", "autorizacion longitud de respuesta de identificacion",
                   "monto, tarifa de transaccion", "monto, tarifa de liquidacion", "monto, tarifa de procesamiento de transaccion",
@@ -23,8 +23,8 @@ campos_iso8583 = ["mapa de los bits extendidos", "numero de cuenta principal pan
                   "nombre ubicacion del aceptador de tarjeta", "datos adicionales", "numero de pista 1 track 1",
                   "datos adicionales iso", "datos adicionales nacional", "datos adicionales privado", "codigo de moneda de transaccion",
                   "codigo de moneda de liquidacion", "codigo de moneda de facturacion del titular de la tarjeta", "datos de numero de identifiacion personal",
-                  "informacion de acceso en referencia a la seguridad", "cantidades adicionales", "iso reservado icc", "iso reservado",
-                  "nacional reservado", "nacional reservado", "nacional reservado", "privado reservado", "privado reservado", "privado reservado",
+                  "informacion de control en referencia a la seguridad", "cantidades adicionales", "iso reservado icc", "iso reservado",
+                  "nacional reservado", "nacional reservado", "nacional reservado", "aviso | codigo de motivo nacional reservado", "privado reservado", "privado reservado",
                   "privado reservado", "codigo de autentificacion de mensajes mac"]
 
 diccionario_campos = {campo: numero for numero, campo in enumerate(campos_iso8583, start=1)}
