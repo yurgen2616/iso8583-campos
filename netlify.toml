@@ -1,8 +1,8 @@
 [build]
-  publish = "static"
-  command = "python app.py"
+  functions = "functions"
+  publish = "public"
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/.netlify/functions/server"
   status = 200
